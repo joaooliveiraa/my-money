@@ -1,0 +1,34 @@
+import styled from 'styled-components';
+
+export const Container = styled.header `
+    background: var(--blue);
+
+`;
+
+export const Content = styled.div`
+    max-width: 1120px; /*Tamanho máximo que é para ser utilizado*/
+    margin: 0 auto; /*Centralizar no meio indepente do tamanho*/
+
+    padding: 2rem 1rem 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+        font-size: 1rem;
+        color: #fff;
+        background: var(--blue-light);
+        border: 0;
+        padding: 0 2rem;
+        border-radius: 0.25;
+        height: 3rem;
+
+        transition: filter 0.2s; /*Suavisar o efeito*/
+
+        &:hover {
+            filter: invert(0.9); /*Aplicar efeitos no hover do botão*/ 
+        }
+    }
+
+`
+
