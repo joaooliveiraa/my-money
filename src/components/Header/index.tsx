@@ -1,12 +1,19 @@
 import logoImg from "../../assests/logo.svg";
 import { Container, Content } from "./styles";
 
-export function Header() {
+interface HeaderPros {
+  openNewTransactionModal: () =>void;
+};
+
+export function Header({ openNewTransactionModal }: HeaderPros) {
+  
   return (
     <Container>
       <Content>
         <img src={logoImg} alt="my money" />
-        <button>Nova Transação</button>
+        <button type="button" onClick={openNewTransactionModal}>
+             Nova Transação
+        </button>
       </Content>
     </Container>
   );
